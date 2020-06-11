@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class MyClass
+{
+  public static void main(String[] args)
+  {
+	 
+     ArrayList<String> al = new ArrayList<String>();
+     al.add("mango");
+     al.add("banana");
+     al.add("apple");
+     al.add("orange");
+     System.out.println(al);
+     Iterator itr = al.iterator();
+     while(itr.hasNext()) {
+     System.out.println(itr.next());
+     System.out.println("return element location 1 "+al.get(1));
+     al.set(1,"go corona");
+     for(String s:al)
+     {
+    	 System.out.println(s);
+     }
+     }
+     
+  }
+}
