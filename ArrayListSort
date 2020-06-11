@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class MyClass
+{
+  public static void main(String[] args)
+  {
+	 
+     ArrayList<String> al = new ArrayList<String>();
+     al.add("mango");
+     al.add("banana");
+     al.add("apple");
+     al.add("orange");
+     System.out.println(al);
+     
+     Collections.sort(al);
+     System.out.println(al);
+     ArrayList<Integer> list = new ArrayList<Integer>();
+     list.add(100);
+     list.add(20);
+     list.add(1000);
+     list.add(55);
+     list.add(10);
+     System.out.println(list);
+     Collections.sort(list);
+     System.out.println(list);
+     }
+     
+  }
