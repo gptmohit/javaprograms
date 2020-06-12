@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class MyClass
+{
+public static void main(String[] args) 
+{
+	HashSet<String> hs = new HashSet<String>();
+	hs.add("Zuck");
+	hs.add("Akash");
+	hs.add("Rohit");
+	hs.add("Shivam");
+	hs.add("Mohit");
+	hs.add("Zuck");
+	hs.add("Zuck");
+	System.out.println(hs);
+	hs.remove("Rohit");
+	System.out.println(hs);
+	HashSet<String> set = new HashSet<String>();
+	set.addAll(hs);
+	set.add("Mango");
+	set.add("Banana");
+	System.out.println(set);
+	set.clear();
+	System.out.println(set);
+}
+}
+     
+ 
