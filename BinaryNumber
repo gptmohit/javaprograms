@@ -1,0 +1,56 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        int count=0;
+        int n = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        
+        String binary;
+        binary =Integer.toBinaryString(n);
+        int ar[] = new int[binary.length()];
+        
+        
+        for(int i=0;i<binary.length();i++)
+        {
+            ar[i]=Integer.parseInt(String.valueOf(binary.charAt(i)));
+        }
+        int max=0;
+        for(int i=0;i<ar.length;i++)
+        {
+            if(ar[i]==0)
+            {
+                if (max<count)
+                    max=count;
+                count=0;
+            }
+           
+            if(ar[i]==1) {
+                count++;
+            }
+            
+        }
+        if (max<count)
+            max=count;
+        
+        System.out.println(max);
+        
+      
+      
+      scanner.close();
+        
+        
+        
+    }
+}
