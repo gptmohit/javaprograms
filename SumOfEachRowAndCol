@@ -1,0 +1,37 @@
+
+import java.io.*;
+import java.util.*;
+
+public class Solution1{
+	static {
+		System.out.println("Enter number of elements");
+	}
+	public static void main(String[] args) {
+		Scanner scan= new Scanner(System.in);
+		int flag=0;
+		int n=scan.nextInt();
+		int m=scan.nextInt();
+		int ar[][]=new int[n][m];
+		int sor=0,soc=0;
+		System.out.println("enter "+m*n+" matrix elements");
+
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < m; j++) {
+				ar[i][j]=scan.nextInt();
+			}
+		}
+		//System.out.println("result of lower tringle");
+		for (int i = 0; i <m; i++) {
+			sor=0;
+			soc=0;
+			for (int j = 0; j <m; j++) {
+				sor=sor+ar[i][j];
+				soc=soc+ar[j][i];
+			}
+			System.out.print("Sum or row = "+sor);
+			System.out.print("Sum or col = "+soc);
+
+		}
+		
+	}	
+} 
